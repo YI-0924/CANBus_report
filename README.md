@@ -54,7 +54,7 @@ case1:no attack, then keep going as usual
 case2:DoS attack, then will create banned_id.txt with DoS ID, and then detected by icsim( will return 0 )
 
 **can achieve 100% accuracy of DoS detect**
-## problem
+## unsolved problem
 ubuntu20.04 cannot run tensorflow
 ## reference
 _[1] "LSTM-Based Intrusion Detection System for In-Vehicle Can Bus Communications" - MD DELWAR HOSSAIN, HIROYUKI INOUE, HIDEYA OCHIAI, DOUDOU FALL, YOUKI KADOBAYASHI (2020)_
