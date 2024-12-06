@@ -68,10 +68,6 @@ _[3] https://github.com/zombieCraig/ICSim_
 _[4] https://github.com/linux-can/can-utils_
 **記得加上license**
 
-_[5] https://www.reddit.com/r/learnpython/comments/1ef2tmc/struggling_with_realtime_detection_of_dos_attacks/?rdt=63945_
+_[5] https://medium.com/@yogeshojha/car-hacking-101-practical-guide-to-exploiting-can-bus-using-instrument-cluster-simulator-part-i-cd88d3eb4a53_
 
-_[6] https://bbs.kanxue.com/thread-278946.htm_
-
-_[7] https://medium.com/@yogeshojha/car-hacking-101-practical-guide-to-exploiting-can-bus-using-instrument-cluster-simulator-part-i-cd88d3eb4a53_
-
-_[8] https://xz.aliyun.com/t/13028?time__1311=GqmhBKYKAKYvK05DK7SiKRWT3NDkDIoEbD#toc-14_
+_[6] https://xz.aliyun.com/t/13028?time__1311=GqmhBKYKAKYvK05DK7SiKRWT3NDkDIoEbD#toc-14_
