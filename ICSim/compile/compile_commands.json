@@ -1,0 +1,14 @@
+[
+  {
+    "directory": "/home/tina/ICSim/compile",
+    "command": "cc -Iicsim@exe -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -g -D_REENTRANT -MD -MQ 'icsim@exe/icsim.c.o' -MF 'icsim@exe/icsim.c.o.d' -o 'icsim@exe/icsim.c.o' -c ../icsim.c",
+    "file": "../icsim.c",
+    "output": "icsim@exe/icsim.c.o"
+  },
+  {
+    "directory": "/home/tina/ICSim/compile",
+    "command": "cc -Icontrols@exe -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -g -D_REENTRANT -MD -MQ 'controls@exe/controls.c.o' -MF 'controls@exe/controls.c.o.d' -o 'controls@exe/controls.c.o' -c ../controls.c",
+    "file": "../controls.c",
+    "output": "controls@exe/controls.c.o"
+  }
+]
