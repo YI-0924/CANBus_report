@@ -1,6 +1,6 @@
 # DoS attack
 ## virtual machine(ubuntu 20.04)
-**1.implement 3 or 4 terminal at the same time to record with/without attack**
+**1.Constructed datasets with and without DoS**
 ```
 cd ICSim
 ./setup_vcan.sh
@@ -21,7 +21,7 @@ cd ICSim
 cd ICSim
 candump -l vcan0 && find . -type f -name 'candump-*' -exec mv {} candumpFile.log \;  //do candump and change log name
 ```
-**2.after recording**
+**2.change datasets into valid csv file for training**
 ```
 python3 toCSV.py  //turn candumpFile.log into test_value.csv file
 ```
@@ -36,7 +36,7 @@ py train.py  //input trainset.csv and trainset_dos.csv to create(save) lstm_mode
 py DoS_detect.py  //input test_value_dos.csv or test_value_not000.csv or test_value_dos_noControls.csv or test_value.csv
 //py delete_target.py is used to remove target from csv file if mistakenly added
 ```
-**3.create target.csv and banned_id.txt after doing DoS_detect.py**
+**3.got target.csv and banned_id.txt after doing DoS_detect.py**
 ## virtual machine
 **banned ID that is DoS**
 ```
@@ -48,15 +48,14 @@ make
 ```
 ./icsim vcan0 and candump、toCSV.py、DoS_detect.py at the same time
 ```
-
+## result
 case1:no attack, then keep going as usual
 
 case2:DoS attack, then will create banned_id.txt with DoS ID, and then detected by icsim( will return 0 )
 
-_ubuntu20.04 cannot run tensorflow_
-
-_can achieve 100% accuracy of DoS detect_
-
+**can achieve 100% accuracy of DoS detect**
+## problem
+ubuntu20.04 cannot run tensorflow
 ## reference
 _[1] "LSTM-Based Intrusion Detection System for In-Vehicle Can Bus Communications" - MD DELWAR HOSSAIN, HIROYUKI INOUE, HIDEYA OCHIAI, DOUDOU FALL, YOUKI KADOBAYASHI (2020)_
 
