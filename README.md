@@ -100,7 +100,7 @@ make
 ## result
 case1:no attack, then keep going as usual
 
-case2:DoS attack, then will create banned_id.txt with DoS ID, and then detected by icsim( will return 0 )
+case2:DoS attack, then will create banned_id.txt with DoS ID that can be detected by icsim( if detected return 0 )
 
 **can achieve 100% accuracy of DoS detect**
 ## unsolved problem
