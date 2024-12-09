@@ -88,9 +88,13 @@ py DoS_detect.py
 ```DoS_detect.py```: input testing dataset (.csv)
 
 ```delete_target.py```: used to remove target from csv file if mistakenly added
+
 **3.got target.csv and banned_id.txt**
+
 target.csv: file that contain datasets and predicted target
+
 banned_id.txt: file that contain IDs that predicted target are 1 (IDs that are DoS attack)
+
 ## virtual machine
 **banned ID that is DoS**
 ```bash
