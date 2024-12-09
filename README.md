@@ -10,7 +10,7 @@ bash start.sh
 3. ```controls```: simulate modules on a car, send control signal(CAN packges) to icsim
 
 **To re-build ICSim**
-using ```make``` to build up.
+use ```make``` to build up.
 ```bash
 # after some modify on source files...
 ~/ICSim$ make
