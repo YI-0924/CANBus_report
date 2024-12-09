@@ -51,9 +51,10 @@ which means the attack doesn't succeceed.
 ## virtual machine(ubuntu 20.04)
 **1.Constructed datasets with and without DoS**
 ```bash
-~/ICSim$ vim icsim.c  //put comment on open banned_id.txt
+~/ICSim$ vim icsim.c
 make
 ```
+put comment on open banned_id.txt
 ```bash
 # (optional: open if applying DoS)
 ~/ICSim$ ./attack
