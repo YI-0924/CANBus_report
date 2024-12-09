@@ -51,60 +51,57 @@ which means the attack doesn't succeceed.
 ## virtual machine(ubuntu 20.04)
 **1.Constructed datasets with and without DoS**
 ```bash
-cd ICSim
-./setup_vcan.sh
-./vim icsim  //add comment of open file and banned_id.txt
+~/ICSim$ vim icsim.c  //put comment on open banned_id.txt
 make
-./icsim vcan0 
-```
-```bash
-cd ICSim
-./controls vcan0
 ```
 ```bash
 # (optional: open if applying DoS)
-cd ICSim
-./attack  //apply DoS attack
+~/ICSim$ ./attack
 ```
+apply DoS attack
 ```bash
-cd ICSim
-candump -l vcan0 && find . -type f -name 'candump-*' -exec mv {} candumpFile.log \;  //do candump and change log name
+~/ICSim$ candump -l vcan0 && find . -type f -name 'candump-*' -exec mv {} candumpFile.log \;
 ```
+do candump (record data) and change log name
 **2.change datasets into valid csv file for training**
 ```
-python3 toCSV.py  //turn candumpFile.log into test_value.csv file
+~/ICSim$ python3 toCSV.py
 ```
+turn candumpFile.log into test_value.csv file
 **3.upload test_value.csv for PC**
 ## PC
 **1.download test_value.csv**
 
 **2.train model on python**
 ```
-py change.py  //input trainset.csv and trainset_dos.csv to create file with target, target=1 means DoS
-py train.py  //input trainset.csv and trainset_dos.csv to create(save) lstm_model.keras and scaler.joblib
-py DoS_detect.py  //input test_value_dos.csv or test_value_not000.csv or test_value_dos_noControls.csv or test_value.csv
-//py delete_target.py is used to remove target from csv file if mistakenly added
+~/model$ py change.py
+py train.py
+py DoS_detect.py
 ```
-**3.got target.csv and banned_id.txt after doing DoS_detect.py**
+```change.py```: input trainset.csv and trainset_dos.csv to create file with target, target=1 means DoS
+```train.py```: input trainset.csv and trainset_dos.csv to create(save) lstm_model.keras and scaler.joblib
+```DoS_detect.py```: input testing dataset (.csv)
+```delete_target.py```: used to remove target from csv file if mistakenly added
+**3.got target.csv and banned_id.txt**
+target.csv: file that contain datasets and predicted target
+banned_id.txt: file that contain IDs that predicted target are 1 (IDs that are DoS attack)
 ## virtual machine
 **banned ID that is DoS**
 ```bash
-cd ICSim
-vim icsim.c  //delete comment of open file and banned_id.txt
+~/ICSim$ vim icsim.c  //delete comment of banned_id.txt
 make
 ```
 ## real-time implement process (not yet implement)
 ```
 ./icsim vcan0 and candump、toCSV.py、DoS_detect.py at the same time
 ```
+problem: ubuntu20.04 cannot run tensorflow
 ## result
-case1:no attack, then keep going as usual
+case1:no attack, keep going as usual
 
-case2:DoS attack, then will create banned_id.txt with DoS ID that can be detected by icsim( if detected return 0 )
+case2:DoS attack, create banned_id.txt with DoS ID that can be detected by icsim and print "Detect DoS Attack", return 0
 
 **can achieve 100% accuracy of DoS detect**
-## unsolved problem
-ubuntu20.04 cannot run tensorflow
 ## reference
 _[1] "LSTM-Based Intrusion Detection System for In-Vehicle Can Bus Communications" - MD DELWAR HOSSAIN, HIROYUKI INOUE, HIDEYA OCHIAI, DOUDOU FALL, YOUKI KADOBAYASHI (2020)_
 
