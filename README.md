@@ -142,10 +142,8 @@ _[1] "LSTM-Based Intrusion Detection System for In-Vehicle Can Bus Communication
 _[2] "OTIDS: A Novel Intrusion Detection System for In-vehicle Network by using Remote Frame" - Hyunsung Lee, Seong Hoon Jeong and Huy Kang Kim (2017)_
 
 _[3] https://github.com/zombieCraig/ICSim_
-**記得加上license**
 
 _[4] https://github.com/linux-can/can-utils_
-**記得加上license**
 
 _[5] https://medium.com/@yogeshojha/car-hacking-101-practical-guide-to-exploiting-can-bus-using-instrument-cluster-simulator-part-i-cd88d3eb4a53_
 
