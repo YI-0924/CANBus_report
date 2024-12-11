@@ -1,17 +1,26 @@
 # Usage
-**To run simulator**
+**install dependency packages, tools, setup configuration**
 ```bash
+#clone project
+git clone https://github.com/YI-0924/CANBus_report.git
+#install dependency
 sudo apt-get install libsdl2-dev libsdl2-image-dev -y
 sudo apt-get install can-utils -y
 sudo apt install gcc -y
+#configurate
 cd ICSim
-sudo bash start.sh
+~/ICSim$ sudo bash setup_vcan.sh
+~/ICSim$ chmod +x start.sh
+```
+**To run simulator**
+```baah
+cd ICSim
+~/ICSim$ ./start.sh
 ```
 ```start.sh```will execute three program
 1. ```candump``` show packges now sending
 2. ```icsim```: dashboard simulator based on CAN bus
 3. ```controls```: simulate modules on a car, send control signal(CAN packges) to icsim
-
 **To re-build ICSim**: 
 use ```make``` to build up.
 ```bash
