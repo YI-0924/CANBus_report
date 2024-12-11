@@ -75,14 +75,7 @@ do candump (record data) and change log name
 turn candumpFile.log into test_value.csv file
 
 **3.upload test_value.csv for PC**
-# Spoofing Attack
-xxxx can be any number you like from 0~F to represent the speed.
-ID 244 stands for the accelerator, ID 200 stands for the dashboard.
-```bash
-./cansend vcan0 200#000000xxxx //if 000000xxxx is a speed more than 10, the dashboard will not change because the speed difference between dashboard and accelerator is too big.
-./cansend vcan0 244#000000xxxx //change the accelerator speed.
-./cansend vcan0 200#000000xxxx //dashboard should change if the number you enter is not too much bigger or smaller than the number you enter when ID is 244.
-```
+
 ## PC
 **1.download test_value.csv**
 
@@ -124,6 +117,16 @@ case1:no attack, keep going as usual
 case2:DoS attack, create banned_id.txt with DoS ID that can be detected by icsim and print "Detect DoS Attack", return 0
 
 **can achieve 100% accuracy of DoS detect**
+
+# Spoofing Attack
+xxxx can be any number you like from 0~F to represent the speed.
+ID 244 stands for the accelerator, ID 200 stands for the dashboard.
+```bash
+./cansend vcan0 200#000000xxxx //if 000000xxxx is a speed more than 10, the dashboard will not change because the speed difference between dashboard and accelerator is too big.
+./cansend vcan0 244#000000xxxx //change the accelerator speed.
+./cansend vcan0 200#000000xxxx //dashboard should change if the number you enter is not too much bigger or smaller than the number you enter when ID is 244.
+```
+
 ## reference
 _[1] "LSTM-Based Intrusion Detection System for In-Vehicle Can Bus Communications" - MD DELWAR HOSSAIN, HIROYUKI INOUE, HIDEYA OCHIAI, DOUDOU FALL, YOUKI KADOBAYASHI (2020)_
 
