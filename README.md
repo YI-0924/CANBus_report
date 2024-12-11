@@ -3,6 +3,7 @@
 ```bash
 sudo apt-get install libsdl2-dev libsdl2-image-dev -y
 sudo apt-get install can-utils -y
+sudo apt install gcc -y
 cd ICSim
 sudo bash start.sh
 ```
