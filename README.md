@@ -4,14 +4,14 @@
 sudo apt-get install libsdl2-dev libsdl2-image-dev -y
 sudo apt-get install can-utils -y
 cd ICSim
-bash start.sh
+sudo bash start.sh
 ```
 ```start.sh```will execute three program
 1. ```candump``` show packges now sending
 2. ```icsim```: dashboard simulator based on CAN bus
 3. ```controls```: simulate modules on a car, send control signal(CAN packges) to icsim
 
-**To re-build ICSim**
+**To re-build ICSim**: 
 use ```make``` to build up.
 ```bash
 # after some modify on source files...
