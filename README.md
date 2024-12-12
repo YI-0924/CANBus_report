@@ -12,8 +12,7 @@ sudo apt install gcc -y
 ~/ICSim$ chmod +x start.sh icsim controls
 ```
 **To run simulator**
-```baah
-cd ICSim
+```bash
 ~/ICSim$ ./start.sh
 ```
 ```start.sh```will execute three program
