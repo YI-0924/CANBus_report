@@ -8,8 +8,7 @@ sudo apt-get install libsdl2-dev libsdl2-image-dev -y
 sudo apt-get install can-utils -y
 sudo apt install gcc -y
 #configurate
-~/ICSim$ sudo bash setup_vcan.sh
-~/ICSim$ chmod +x start.sh icsim controls
+~/ICSim$ chmod +x start.sh setup_vcan.sh icsim controls
 ```
 **To run simulator**
 ```bash
