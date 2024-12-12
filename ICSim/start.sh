@@ -1,3 +1,4 @@
+./setup_vcan.sh
 gnome-terminal -- ./icsim vcan0
 gnome-terminal -- ./controls vcan0
 
